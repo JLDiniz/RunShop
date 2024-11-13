@@ -1,0 +1,7 @@
+1,tenis,450
+2,meia,30
+3,relogio,600
+4,short,50
+5,gel de carboidrato,4
+6,garrafa,15
+7,luva,35
