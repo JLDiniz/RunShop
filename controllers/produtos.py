@@ -7,7 +7,7 @@ def carregar_produtos():
 
     #Usamos a instrução with open(...) as file: para abrir um arquivo e garantir que ele será fechado automaticamente ao final. 
     #O segundo argumento, 'r', significa que estamos abrindo o arquivo no modo de leitura.
-    with open('C:\\Users\\jluca\\OneDrive\\Área de Trabalho\\Programação\\backend\\aula-1\\homework\\pesquisas\\controllers\\database_produtos.txt', 'r') as file:
+    with open('C:\\Users\\jluca\\OneDrive\\Área de Trabalho\\Programação\\RunShop\\controllers\\database_produtos.txt', 'r') as file:
         
         #Aqui, criamos um laço for que percorre cada linha do arquivo. 
         # A cada iteração, a variável linha representa uma linha do arquivo.
@@ -100,7 +100,7 @@ def cadastrar_produto(nome, preco):
     novo_produto = {"id": novo_produto_id, "nome": nome, "preço": preco}
 
     # Salvar o novo produto no final do arquivo sem apagar os anteriores
-    with open('C:\\Users\\jluca\\OneDrive\\Área de Trabalho\\Programação\\backend\\aula-1\\homework\\pesquisas\\controllers\\database_produtos.txt', 'a') as file:
+    with open('C:\\Users\\jluca\\OneDrive\\Área de Trabalho\\Programação\\RunShop\\controllers\\database_produtos.txt', 'a') as file:
         # Adiciona uma nova linha para separar do último registro, caso o arquivo não esteja vazio
         if produtos:
             file.write("\n")
@@ -129,7 +129,7 @@ def deletar_produto(produto_id):
     produtos = [produto for produto in produtos if produto["id"] != produto_id]
     
     # Salvar a lista atualizada no arquivo
-    with open('C:\\Users\\jluca\\OneDrive\\Área de Trabalho\\Programação\\backend\\aula-1\\homework\\pesquisas\\controllers\\database_produtos.txt', 'w') as file:
+    with open('C:\\Users\\jluca\\OneDrive\\Área de Trabalho\\Programação\\RunShop\\controllers\\database_produtos.txt', 'w') as file:
         for i, produto in enumerate(produtos):
             if i > 0:
                 file.write("\n")
