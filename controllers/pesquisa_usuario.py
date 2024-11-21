@@ -1,30 +1,4 @@
-def carregar_usuarios():
-    usuarios = []
-    """
-        Com o "with" voce consegue abrir algo, como um arquivo por exemplo, e com o "as", voce coloca ele em uma variavel, por exemplo, "as file" = "como file"
-        onde "file" vai ser a variavel do arquivo. Podendo assim ler e escrever no "file".
-        Use "r" para read (ler), e "w" para write (escrever).
-    """
-    with open('C:\\Users\\jluca\\OneDrive\\Área de Trabalho\\Programação\\backend\\aula-1\\homework\\pesquisas\\controllers\\database_usuario.txt', 'r') as file:
-
-        linha = file.readline()  # Ler a primeira linha
-
-        while linha:  # Enquanto houver linhas no arquivo
-            
-            # separa os dados ("objetos", palavras), por ",".
-            dados = linha.strip().split(',')
-
-            if len(dados) == 3:  # Apenas usuários têm 3 campos, ou seja, aqui ele confere se voce esta passando 3 dados para ele ler (nome, email e senha).
-                usuarios.append({
-                    "nome": dados[0],
-                    "email": dados[1],
-                    "senha": dados[2]
-                })
-            linha = file.readline()  # Ler a próxima linha
-
-    # No final a function retorna a array (lista) de usuarios.
-    return usuarios
-
+from controllers.usuarios import carregar_usuarios
 def listar_usuarios():
     # Carregar usuários atuais
     usuarios = carregar_usuarios()
@@ -96,7 +70,7 @@ def cadastrar_usuario(nome, email, senha):
     usuarios.append({"nome": nome, "email": email, "senha": senha})
 
     # Salvar usuários de volta no arquivo
-    with open('C:\\Users\\jluca\\OneDrive\\Área de Trabalho\\Programação\\backend\\aula-1\\homework\\pesquisas\\controllers\\database_usuario.txt', 'w') as file:
+    with open('C:\\Users\\jluca\\OneDrive\\Área de Trabalho\\Programação\\RunShop\\controllers\\database_usuario.txt', 'w') as file:
         contador = 0
         while contador < len(usuarios):
             usuario = usuarios[contador]
@@ -127,7 +101,7 @@ def deletar_usuario(nome):
     
     # Salvar a lista atualizada no arquivo
     try:
-        with open('C:\\Users\\jluca\\OneDrive\\Área de Trabalho\\Programação\\backend\\aula-1\\homework\\pesquisas\\controllers\\database_usuario.txt', 'w') as file:
+        with open('C:\\Users\\jluca\\OneDrive\\Área de Trabalho\\Programação\\RunShop\\controllers\\database_usuario.txt', 'w') as file:
             for i, usuario in enumerate(usuarios):
                 if i > 0:
                     file.write("\n")
