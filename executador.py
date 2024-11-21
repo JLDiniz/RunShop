@@ -46,7 +46,7 @@ while aplicacao_online == True:
                             if (resultado_pesquisa_input == 0):
                                 sair_pesquisa = True
                                 
-                            #Só entra nesse else se resultado_pesquisa_input for diferente de '0'
+                            # Só entra nesse else se resultado_pesquisa_input for diferente de '0'
                             else:
                                 resultado_pesquisa_usuario = pesquisa_usuario(resultado_pesquisa_input)
 
