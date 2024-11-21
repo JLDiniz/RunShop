@@ -13,7 +13,7 @@ while aplicacao_online == True:
     # Fazer uma condição para verivicar se essa variavel vai receber a opção para ir para controle de usuario ou produto
     if (tipo_login == 1): #usuario
         contador_tentativas_login_usuario = 0
-        #testando
+
         while contador_tentativas_login_usuario < 3:
 
             resultado_email = input("Digite o email: ")
@@ -46,7 +46,7 @@ while aplicacao_online == True:
                             if (resultado_pesquisa_input == 0):
                                 sair_pesquisa = True
                                 
-                            
+                            #Só entra nesse else se resultado_pesquisa_input for diferente de '0'
                             else:
                                 resultado_pesquisa_usuario = pesquisa_usuario(resultado_pesquisa_input)
 
