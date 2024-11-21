@@ -59,6 +59,7 @@ else:
 # Teste carregar produtos
 resultado_teste_carregar_produto = carregar_produtos()
 if isinstance(resultado_teste_carregar_produto, list) == True:
-    print("Ok: carregar_produtos")
+    if isinstance(resultado_teste_carregar_produto[0]["id"], int) and isinstance(resultado_teste_carregar_produto[0]["nome"], str) and isinstance(resultado_teste_carregar_produto[0]["preço"], float):
+        print("Ok: carregar_produtos")
 else:
     print('Error: carregar produto, carregar produto nao retornou uma lista.')
