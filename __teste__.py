@@ -11,7 +11,7 @@ else:
 
 resultado_teste_pesquisa_usuario = pesquisa_usuario("sadasdasd")
 if(resultado_teste_pesquisa_usuario["status"]):
-    print("ERROR: pesquisa_usuario retorna true para parametros certos.")
+    print("ERROR: pesquisa_usuario retorna true para parametros errados.")
 else:
     print("OK: pesquisa_usuario retorna false para parametros certos.")
 
