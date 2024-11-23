@@ -30,9 +30,7 @@ while aplicacao_online == True:
                     menu_opcao = int(input("Seja bem vindo! Digite 10 para encerrar a aplicação, 0 para deslogar, 1 para pesquisar o usuário, 2 para cadastrar, 3 para listar ou 4 para deletar: "))
                     
                     if (menu_opcao == 10): # encerrar
-                        print(menu_opcao)
                         aplicacao_online = False
-                        sair_pesquisa = True
                         contador_tentativas_login_usuario = 3
 
                     if (menu_opcao == 0): # deslogar
