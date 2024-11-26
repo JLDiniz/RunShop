@@ -33,7 +33,7 @@ def check_nome_usuario(nome):
     }
 
 
-def pesquisa_usuario(email):
+def pesquisa_usuario(nome):
     database_usuarios = carregar_usuarios()
     
     contador = 0
