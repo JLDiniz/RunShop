@@ -41,18 +41,20 @@ while aplicacao_online == True:
                     if (menu_opcao == 1): # pesquisar
                         sair_pesquisa = False
                         while sair_pesquisa == False :
-                            resultado_pesquisa_input = input("Digite o nome da conta que você deseja: ")
+                            resultado_pesquisa_input = input("Digite o nome da conta que você deseja ou '0' para sair: ")
                             
-                            if (resultado_pesquisa_input == 0):
+                            if (resultado_pesquisa_input == '0'):
                                 sair_pesquisa = True
-                                
+
                             # Só entra nesse else se resultado_pesquisa_input for diferente de '0'
                             else:
                                 resultado_pesquisa_usuario = pesquisa_usuario(resultado_pesquisa_input)
 
                                 resultado_conferir_status_usuario = conferir_status(resultado_pesquisa_usuario)
+                                
                                 if (resultado_conferir_status_usuario["status"]):
-                                    print("Nome: ", resultado_pesquisa_usuario["conta"]["nome"])
+                                    print("Nome: ",resultado_pesquisa_usuario["dados"]["nome"], "Email: ", resultado_pesquisa_usuario["dados"]["email"])
+
 
                     if (menu_opcao == 2): # cadastrar
                         nome = input("Digite o nome: ")
@@ -117,14 +119,12 @@ while aplicacao_online == True:
                     menu_opcao = int(input('Seja bem vindo! Digite 10 para encerrar a aplicação, 0 para deslogar, 1 para pesquisar o produto, 2 para cadastrar, 3 para listar ou 4 para deletar: '))
 
                     if (menu_opcao == 10):
-                        print(menu_opcao)
                         aplicacao_online = False
                         sair_menu_opçoes = True
                         contador_tentativas_login = 3
                     
                     if(menu_opcao == 0):
                         sair_menu_opçoes = True
-                        print(sair_menu_opçoes)
                         
                     if(menu_opcao == 1):
                         sair_pesquisa = False
@@ -162,7 +162,7 @@ while aplicacao_online == True:
                                 sair_pesquisa = True
 
                             else:
-                                preço = int(input("Digite o preço: "))
+                                preço = float(input("Digite o preço: "))
                                 resultado_cadastro = cadastrar_produto(nome, preço)
 
                                 if (resultado_cadastro["status"]):
@@ -174,15 +174,20 @@ while aplicacao_online == True:
                         listar_produtos()
                     
                     if(menu_opcao == 4):
-                        item_id_a_deletar = int(input("Digite o id do item que deseja deletar: "))
+                        item_id_a_deletar = int(input("Digite '0' para sair ou digite o id do item que deseja deletar: "))
 
-                        status_id_produtos_database = check_id_produtos(item_id_a_deletar)
-
-                        if status_id_produtos_database['status']:
-                            resultado_deletar_produto = deletar_produto(item_id_a_deletar)
-                            print(resultado_deletar_produto['mensagem'])
+                        if (item_id_a_deletar == 0):
+                            sair_cadastro = True
+                            sair_pesquisa = True
+                            
                         else:
-                            print(status_id_produtos_database['mensagem'])
+                            status_id_produtos_database = check_id_produtos(item_id_a_deletar)
+
+                            if status_id_produtos_database['status']:
+                                resultado_deletar_produto = deletar_produto(item_id_a_deletar)
+                                print(resultado_deletar_produto['mensagem'])
+                            else:
+                                print(status_id_produtos_database['mensagem'])
 
             else:
                 contador_tentativas_login += 1
