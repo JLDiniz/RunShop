@@ -30,18 +30,18 @@ while aplicacao_online == True:
                     menu_opcao = int(input("Seja bem vindo! Digite 10 para encerrar a aplicação, 0 para deslogar, 1 para pesquisar o usuário, 2 para cadastrar, 3 para listar ou 4 para deletar: "))
                     
                     if (menu_opcao == 10): # encerrar
-                        print(menu_opcao)
+                        sair_menu_opçoes = True
                         aplicacao_online = False
-                        sair_pesquisa = True
                         contador_tentativas_login_usuario = 3
 
                     if (menu_opcao == 0): # deslogar
-                        sair_pesquisa = True
+                        sair_menu_opçoes = True
+                        contador_tentativas_login_usuario = 3
                         
                     if (menu_opcao == 1): # pesquisar
                         sair_pesquisa = False
                         while sair_pesquisa == False :
-                            resultado_pesquisa_input = input("Qual conta você deseja? ")
+                            resultado_pesquisa_input = input("Digite o nome da conta que você deseja: ")
                             
                             if (resultado_pesquisa_input == 0):
                                 sair_pesquisa = True

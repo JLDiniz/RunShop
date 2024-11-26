@@ -38,11 +38,14 @@ def pesquisa_usuario(email):
     
     contador = 0
     while contador < len(database_usuarios):
-        if database_usuarios[contador]["email"] == email:
+        if database_usuarios[contador]["nome"] == nome:
             return {
                 "status": True,
-                "conta": database_usuarios[contador],
-                "mensagem": "conta encontrada!"
+                "dados": {
+                    "nome": database_usuarios[contador]["nome"],
+                    "email": database_usuarios[contador]["email"]
+                },
+                "mensagem": "Usuário encontrado!"
             }
         contador += 1
     
