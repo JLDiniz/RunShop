@@ -1,6 +1,6 @@
 lucas,lucas@exemplo.com,lucas123
-fizz,fizz@exemplo.com,fizz123
 zyra,zyra@exemplo.com,zyra123
 dev,dev,dev
 liz,liz,liz
 luffy,luffy@exemplo.com,luffy123
+luke,luke@exemplo.com,luke123
