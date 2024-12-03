@@ -73,7 +73,7 @@ def cadastrar_usuario(nome, email, senha):
     usuarios.append({"nome": nome, "email": email, "senha": senha})
 
     # Salvar usuários de volta no arquivo
-    with open('C:\\Users\\jluca\\OneDrive\\Área de Trabalho\\Programação\\RunShop\\controllers\\database_usuario.txt', 'w') as file:
+    with open('C:\\Users\\LUCAS\\OneDrive\\Documentos\\Programação\\RunShop\\controllers\\database_usuario.txt', 'w') as file:
         contador = 0
         while contador < len(usuarios):
             usuario = usuarios[contador]
@@ -104,7 +104,7 @@ def deletar_usuario(nome):
     
     # Salvar a lista atualizada no arquivo
     try:
-        with open('C:\\Users\\jluca\\OneDrive\\Área de Trabalho\\Programação\\RunShop\\controllers\\database_usuario.txt', 'w') as file:
+        with open('C:\\Users\\LUCAS\\OneDrive\\Documentos\\Programação\\RunShop\\controllers\\database_usuario.txt', 'w') as file:
             for i, usuario in enumerate(usuarios):
                 if i > 0:
                     file.write("\n")
