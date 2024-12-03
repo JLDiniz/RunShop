@@ -8,7 +8,7 @@ def carregar_usuarios():
 
   # Esta linha abre o arquivo localizado no caminho especificado. O modo 'r' indica que estamos abrindo o arquivo apenas para leitura. 
   # O with garante que o arquivo será fechado automaticamente após sua leitura.
-    with open('C:\\Users\\jluca\\OneDrive\\Área de Trabalho\\Programação\\RunShop\\controllers\\database_usuario.txt', 'r') as file:
+    with open('C:\\Users\\LUCAS\\OneDrive\\Documentos\\Programação\\RunShop\\controllers\\database_usuario.txt', 'r') as file:
 
         # Aqui lemos a primeira linha do arquivo e armazenamos o conteúdo na variável linha. Cada linha deve conter dados de um usuário.
         linha = file.readline()  
