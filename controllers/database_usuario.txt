@@ -4,3 +4,4 @@ liz,liz,liz
 luffy,luffy@exemplo.com,luffy123
 luke,luke@exemplo.com,luke123
 daniele,daniele@exemplo.com,daniele123
+Suanny,suanny@exemplo.com,suanny123

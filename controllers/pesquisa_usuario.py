@@ -12,8 +12,9 @@ def listar_usuarios():
         return  # Interrompe a função se não houver usuários
 
     # Exibir cada usuário (omitindo a senha por segurança)
-    for usuario in usuarios:
-        print(f"Nome: {usuario['nome']}, Email: {usuario['email']}")
+    #for usuario in usuarios:
+    #    print(f"Nome: {usuario['nome']}, Email: {usuario['email']}")
+    return usuarios
 
 def check_nome_usuario(nome):
     # Carregar lista de usuários atual
