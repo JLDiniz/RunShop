@@ -46,15 +46,17 @@ def listar_produtos():
     # não foi bem-sucedida (não há produtos).
     #"mensagem": "Nenhum produto cadastrado.": uma mensagem informando que não há produtos cadastrados.
     if not produtos:
-        print({
+        return({
             "status": False,
             "mensagem": "Nenhum produto cadastrado."
         }) 
     
     #Este é um laço for que itera sobre cada produto em produtos. 
     # Para cada produto (item), o código exibe o id, o nome e o preço do produto, acessando cada campo pelo nome da chave
-    for item in produtos:
-        print(item['id'], item['nome'], item['preço'])
+    return({
+            "status": True,
+            "produtos": produtos
+        }) 
 
 
 #Aqui estamos definindo uma função chamada pesquisa_item. 

@@ -5,3 +5,4 @@
 5,gel de carboidrato,4.0
 6,garrafa,15.0
 8,GPS,600.5
+9,boné,55

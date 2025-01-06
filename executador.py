@@ -69,7 +69,13 @@ while aplicacao_online == True:
                             print('Erro ao cadastrar produto')
                     
                     if(menu_opcao == 3): #listar
-                        listar_usuarios()
+                        for item in listar_usuarios():
+                            print(
+                                {
+                                    "nome": item["nome"],
+                                    "email": item["email"]
+                                }
+                            )
 
                     if(menu_opcao == 4): #deletar
                         usuario_a_deletar = input("Digite o nome do usuário que deseja deletar: ")
