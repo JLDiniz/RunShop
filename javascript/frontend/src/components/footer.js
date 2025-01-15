@@ -1,8 +1,8 @@
 
 export function FooterApp () {
     return (
-       <>
-        <p>footer</p>
-       </>
+        <div className="footer">
+            <p>footer</p>
+        </div>
     )
 }

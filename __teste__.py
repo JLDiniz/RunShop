@@ -104,3 +104,18 @@ teste_cadastrar_produto_positivo()
 teste_cadastrar_produto_negativo()
 
 
+Array = [
+  "abacaxi", 
+  "banana", 
+  "coco", 
+  "damasco"
+]
+
+contador = 0
+
+while contador <len(Array):
+    print(f"Item{contador}:{Array[contador]}")
+
+    contador +=1
+
+

@@ -1,3 +1,93 @@
+*{
+  margin: 0;
+  padding: 0;
+  
+}
+
+.divteste{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color:rgb(201, 191, 187);
+  margin: 10px;
+  border: 1px solid rgb(62, 62, 62);
+  border-radius: 10px;
+  height: 50px;
+  width: 110px;
+}
+
+
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  width: 100%;
+  height: 13vh;
+  border-bottom: 2px solid rgb(62, 62, 62);
+  background-color: rgb(201, 191, 187);
+}
+
 .titulo{
-  color: red;
+  margin-left: 10px;
+  color: rgb(62, 62, 62);
+}
+
+.divTipoLogin{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.buttonEntrar{
+  width: 50px;
+}
+
+.principal{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 500px;
+  background-color: rgb(145, 137, 133);
+  border-bottom: 2px solid rgb(62, 62, 62);
+}
+
+.divPesquisa{
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.divItem{
+  display: flex;
+  align-items: center;
+ 
+}
+
+.divTenis{
+  display: flex;
+  flex-direction: column;
+  background-color:rgb(201, 191, 187);
+  margin: 10px;
+  border-radius: 10px;
+}
+.divRelogio{
+  display: flex;
+  flex-direction: column;
+  background-color:rgb(201, 191, 187);
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.footer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  width: 100%;
+  height: 15vh;
+
+  background-color: rgb(201, 191, 187);
 }
