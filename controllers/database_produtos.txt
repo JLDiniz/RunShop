@@ -5,10 +5,5 @@
 5,gel de carboidrato,4.0
 6,garrafa,15.0
 8,GPS,600.5
-9,boné,55
-10,camelback,15.2
-11,,1.99
-12,Régua,-5
-13,camelback,15.2
-14,,1.99
-15,Régua,-5
+9,bone,35
+10,oculos, 150

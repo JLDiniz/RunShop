@@ -1,20 +1,20 @@
 
 
-export function percorrerDados(array) {
+export function PercorrerDados({ array }) {
     let contador = 0;
-    const result = []
+    const result = [];
+
     while (contador < array.length) {
 
-        if (array[contador]['status']) {
-            result.push(
-                <div className="divteste">
-                    <p>Nome: {array[contador]["nome"]}</p>
-                    <p>Preço: {array[contador]["preço"]}</p>
-                </div>
-            )
-        }
+        result.push(
+            <div className="divteste" key={contador}>
+                <p>Nome: {array[contador]["nome"]}</p>
+                <p>Preço: {array[contador]["preço"]}</p>
+            </div>
+        );
 
         contador++;
     }
-    return result
-}
+
+    return result;
+};

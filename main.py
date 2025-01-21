@@ -1,9 +1,18 @@
 from fastapi import FastAPI
-from controllers.pesquisa_usuario import listar_usuarios, cadastrar_usuario, pesquisa_usuario, check_nome_usuario,deletar_usuario
+from fastapi.middleware.cors import CORSMiddleware
+from controllers.pesquisa_usuario import listar_usuarios, cadastrar_usuario, pesquisa_usuario, check_nome_usuario, deletar_usuario
 from controllers.usuarios import carregar_usuarios, validar_login
 from controllers.produtos import carregar_produtos, listar_produtos, pesquisa_item, cadastrar_produto, deletar_produto, check_id_produtos
 
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Permite todas as origens
+    allow_credentials=True,
+    allow_methods=["*"],  # Permite todos os métodos HTTP (GET, POST, DELETE, etc.)
+    allow_headers=["*"],  # Permite todos os cabeçalhos
+)
 
 
 @app.get("/")
